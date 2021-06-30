@@ -1,5 +1,8 @@
 package com.example.jwork_android;
 
+/*
+Kelas Location merupakan kelas yang memuat informasi tentang lokasi dari recruiter
+ */
 public class Location {
     private String province;
     private String description;

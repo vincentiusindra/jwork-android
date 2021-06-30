@@ -21,7 +21,7 @@ public class RegisterRequest extends StringRequest {
     }
 
     @Override
-    public Map<String, String> getParams() throws AuthFailureError {
+    public Map<String, String> getParams(){
         return params;
     }
-}
+}   

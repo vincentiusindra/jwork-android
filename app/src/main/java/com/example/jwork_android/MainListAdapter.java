@@ -79,7 +79,7 @@ public class MainListAdapter extends BaseExpandableListAdapter {
             LayoutInflater layoutInflater = (LayoutInflater) this._context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = layoutInflater.inflate(R.layout.layout_job, null);
         }
-        TextView txtListChild = (TextView) convertView.findViewById(R.id.lblListHeader);
+        TextView txtListChild = (TextView) convertView.findViewById(R.id.lblListItem);
         String string = childText.getName() + ", Fee : " + childText.getFee();
         txtListChild.setText(string);
         return convertView;

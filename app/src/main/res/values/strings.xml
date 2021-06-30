@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">jwork-android</string>
+    <string name="apply_job">Apply Job</string>
+    <string name="job_name">Job Name</string>
+    <string name="job_category">Job Category</string>
+    <string name="job_fee">Job Fee</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="e_wallet">E-wallet</string>
+    <string name="bank">Bank</string>
+    <string name="total_fee">Total Fee</string>
+    <string name="textview">TextView</string>
+    <string name="edittext">EditText</string>
+    <string name="referral_code">Referral Code</string>
+    <string name="apply_now">Apply Now</string>
+    <string name="count">Count</string>
+    <string name="applied_job">Applied Job</string>
+    <string name="invoice_id">Invoice ID</string>
+    <string name="staticJobseeker_name">Jobseeker Name:</string>
+    <string name="staticInvoice_date">Invoice Date:</string>
+    <string name="staticPayment_type">Payment Type:</string>
+    <string name="finish">Finish</string>
+    <string name="cancel">Cancel</string>
+    <string name="staticTotal_fee">Total Fee:</string>
+    <string name="staticJob_name">Job Name:</string>
+    <string name="fee">Fee</string>
+    <string name="invoice_status">Invoice Status</string>
+    <string name="staticReferral_code">Referral Code:</string>
+    <string name="payment_type">Payment Type</string>
+    <string name="invoice_date">Invoice Date</string>
+    <string name="jobseeker_name">Jobseeker Name</string>
+    <string name="staticInvoice_status">Invoice Status:</string>
 </resources>

@@ -17,6 +17,9 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/*
+Kelas ApplyJobActivity merupakan kelas dimana seorang jobseeker melakukan proses login
+ */
 public class LoginActivity extends AppCompatActivity {
 
     @Override
@@ -27,40 +30,33 @@ public class LoginActivity extends AppCompatActivity {
         EditText etPassword = findViewById(R.id.etPassword);
         Button btnLogin = findViewById(R.id.btnLogin);
         TextView tvRegister = findViewById(R.id.tvRegister);
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String email = etEmail.getText().toString();
-                String password = etPassword.getText().toString();
+        btnLogin.setOnClickListener(v -> {
+            String email = etEmail.getText().toString();
+            String password = etPassword.getText().toString();
 
-                Response.Listener<String> responseListener = new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            JSONObject jsonObject = new JSONObject(response);
-                            if (jsonObject != null) {
-                                Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                                Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
-                                startActivity(loginIntent);
-                                finish();
-                            }
-                        } catch (JSONException e) {
-                            Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
-                        }
+            Response.Listener<String> responseListener = response -> {
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    if (jsonObject != null) {
+                        Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        intent.putExtra("jobseekerId", jsonObject.getInt("id"));
+                        intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                        finish();
                     }
-                };
+                } catch (JSONException e) {
+                    Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                }
+            };
 
-                LoginRequest loginRequest = new LoginRequest(email, password, responseListener);
-                RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
-                queue.add(loginRequest);
-            }
+            LoginRequest loginRequest = new LoginRequest(email, password, responseListener);
+            RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
+            queue.add(loginRequest);
         });
-        tvRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-                startActivity(intent);
-            }
+        tvRegister.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            startActivity(intent);
         });
     }
 

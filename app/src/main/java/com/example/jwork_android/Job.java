@@ -1,5 +1,8 @@
 package com.example.jwork_android;
 
+/*
+Kelas Job merupakan kelas yang memuat infomarsi tentang pekerjaan
+ */
 public class Job {
     private int id;
     private String name;

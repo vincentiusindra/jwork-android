@@ -1,6 +1,5 @@
 package com.example.jwork_android;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
@@ -8,6 +7,9 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+Kelas BonusRequest menangani semua request yang berhubungan dengan proses login
+ */
 public class LoginRequest extends StringRequest {
 
     private static final String URL = "http://192.168.1.6:8080/jobseeker/login";
@@ -21,7 +23,7 @@ public class LoginRequest extends StringRequest {
     }
 
     @Override
-    public Map<String, String> getParams() throws AuthFailureError {
+    public Map<String, String> getParams(){
         return params;
     }
 }
