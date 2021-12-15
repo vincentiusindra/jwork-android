@@ -11,7 +11,7 @@ Kelas BonusRequest menangani semua request yang berhubungan dengan penggunaan re
  */
 public class BonusRequest extends StringRequest {
 
-    private static final String URL = "http://192.168.1.6:8080/jobseeker/bonus/";
+    private static final String URL = "http://34.101.230.79:60006/jobseeker/bonus/";
     private Map<String, String> params;
 
     public BonusRequest(String referralCode, Response.Listener<String> listener){

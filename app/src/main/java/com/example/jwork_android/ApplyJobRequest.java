@@ -10,8 +10,8 @@ import java.util.Map;
 Kelas ApplyJobRequest menangani semua request pada saat melamar pekerjaan
  */
 public class ApplyJobRequest extends StringRequest {
-    private static final String ewalletURL = "http://192.168.1.6:8080/invoice/createEWalletPayment";
-    private static final String bankURL = "http://192.168.1.6:8080/invoice/createBankPayment";
+    private static final String ewalletURL = "http://34.101.230.79:60006/invoice/createEWalletPayment";
+    private static final String bankURL = "http://34.101.230.79:60006/invoice/createBankPayment";
     private Map<String, String> params;
 
     public ApplyJobRequest(String jobIdList, String jobseekerId, String referralCode, Response.Listener<String> listener) {

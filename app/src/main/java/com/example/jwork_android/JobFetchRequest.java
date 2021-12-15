@@ -10,7 +10,7 @@ import java.util.Map;
 Kelas JobBatalRequest menangani request untuk mendapatkan sebuah invoice
  */
 public class JobFetchRequest extends StringRequest {
-    private static final String URL = "http://192.168.1.6:8080/invoice/jobseeker/";
+    private static final String URL = "http://34.101.230.79:60006/invoice/jobseeker/";
     private Map<String,String> params;
 
     public JobFetchRequest(String jobseekerId, Response.Listener<String> listener) {

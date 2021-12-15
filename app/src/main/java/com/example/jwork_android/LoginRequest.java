@@ -12,7 +12,7 @@ Kelas BonusRequest menangani semua request yang berhubungan dengan proses login
  */
 public class LoginRequest extends StringRequest {
 
-    private static final String URL = "http://192.168.1.6:8080/jobseeker/login";
+    private static final String URL = "http://34.101.230.79:60006/jobseeker/login";
     private Map<String, String> params;
 
     public LoginRequest(String email, String password, Response.Listener<String> listener){

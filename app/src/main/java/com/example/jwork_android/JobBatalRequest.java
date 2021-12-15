@@ -10,7 +10,7 @@ import java.util.Map;
 Kelas JobBatalRequest menangani request untuk membatalkan sebuah invoice
  */
 public class JobBatalRequest extends StringRequest {
-    private static final String URL = "http://192.168.1.6:8080/invoice/invoiceStatus/";
+    private static final String URL = "http://34.101.230.79:60006/invoice/invoiceStatus/";
     private Map<String, String> params;
     private String invoiceStatus = "Cancelled";
 
